@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        button{
-            width: 120px;
-            height: 40px;
-            background-color: #681111;
-            cursor: pointer;
-            border-radius: 20px;
-            color: white;
-            margin-left: 35%;
-        }
-        .body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          margin-top: 15%;
+      button {
+        width: 120px;
+        height: 40px;
+        background-color: #681111;
+        cursor: pointer;
+        border-radius: 20px;
+        color: white;
+        margin-left: 35%;
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+      }
+      h1 {
+        color: rgb(199, 223, 223);
+      }
+      p {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+      }
+      .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 
-        }
-        h1{
-            color: rgb(199, 223, 223);
-        }
-        p{
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="wrapper">
     <div class="body">
-        <div style="background-color: #977070; border-radius: 10px;">
-    <p style="margin-left: 35%; color: aquamarine;">Motivation Lines !</p>
-    <div style="width: 400px;">
-    <h1 id="Author"></h1>
-    <p id="Quots"></p>
+      <div style="background-color: #977070; border-radius: 10px">
+        <p style="margin-left: 35%; color: aquamarine">Motivation Lines !</p>
+        <div style="width: 400px">
+          <h1 id="Author"></h1>
+          <p id="Quots"></p>
+        </div>
+        <button onclick="ShowshaiyariEnglish()">Genrate Quots</button>
+        <script src="index.js"></script>
+      </div>
+    </div>
+
+   
+
+    
 </div>
-    <button onclick="showweatherapi()">Genrate Quots</button>
-    <script src="index.js"></script>
-</div>
-</div>
-</body>
+  </body>
 </html>

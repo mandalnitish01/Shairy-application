@@ -43,7 +43,7 @@ function renderonUI(data) {
   // document.body.appendChild(newParaone);
 }
 //This function is used for featch data from API.
-async function showweatherapi() {
+async function ShowshaiyariEnglish() {
   try {
     let result = await fetch(
       `https://api.freeapi.app/api/v1/public/quotes/quote/random`
@@ -58,3 +58,14 @@ async function showweatherapi() {
     console.log(`404 error found`, err);
   }
 }
+
+
+
+
+
+
+
+
+
+
+

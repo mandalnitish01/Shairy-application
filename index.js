@@ -1,3 +1,86 @@
+
+let Author = document.getElementById("Author");
+let Quots = document.getElementById("Quots");
+const copy = document.getElementById("copy")
+//this function is used for print the data on UI.
+
+function renderonUI(data) {
+//Display the quote and author on the page.
+  Author.textContent = ` Author = ${data?.data?.author}`;
+  Quots.textContent = ` Quots = ${data?.data?.content}`;
+}
+
+
+
+// Add a "New Quote" button to fetch another quote.
+async function ShowshaiyariEnglish() {
+  try {
+    let result = await fetch(
+      `https://api.freeapi.app/api/v1/public/quotes/quote/random`
+    ); //// Fetch a random quote from the API
+    let data = await result.json();
+
+    console.log(data);
+    renderonUI(data);
+  } 
+  catch (err)
+   {
+    console.log(`404 error found`, err);
+  }
+}
+//for copy to clipboard 
+copy.addEventListener('click', () => {
+  const copytext = `${Author.textContent}\n${Quots.textContent}`; // Combine text with a new line
+  navigator.clipboard.writeText(copytext)
+    .then(() => alert("Copied to clipboard!"))
+    .catch(err => alert("Failed to copy: ", err));
+});
+
+
+
+// Do not read below code this is not related to this 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // //this function is used for print the data on UI.
 // const API_KEY = "e26ad13e154ee52ec0bb09af9ed6d5c1";
 // function renderonUI(data) {
@@ -24,48 +107,3 @@
 //     console.log(`404 error found`, err);
 //   }
 // }
-
-
-
-
-let Author = document.getElementById("Author");
-let Quots = document.getElementById("Quots");
-
-//this function is used for print the data on UI.
-
-function renderonUI(data) {
-  // let newParatwo = document.createElement("p");
-  Author.textContent = ` Author = ${data?.data?.author}`;
-  // document.body.appendChild( newParatwo);
-
-  // let newParaone = document.createElement("p");
-  Quots.textContent = ` Quots = ${data?.data?.content}`;
-  // document.body.appendChild(newParaone);
-}
-//This function is used for featch data from API.
-async function ShowshaiyariEnglish() {
-  try {
-    let result = await fetch(
-      `https://api.freeapi.app/api/v1/public/quotes/quote/random`
-    );
-    let data = await result.json();
-
-    console.log(data);
-    renderonUI(data);
-  } 
-  catch (err)
-   {
-    console.log(`404 error found`, err);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-

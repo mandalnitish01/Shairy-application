@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      .buttontext{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+      }
       button {
         width: 120px;
         height: 40px;
@@ -14,6 +19,7 @@
         border-radius: 20px;
         color: white;
         margin-left: 35%;
+        border: none;
       }
       .body {
         display: flex;
@@ -42,12 +48,16 @@
     <div class="wrapper">
     <div class="body">
       <div style="background-color: #977070; border-radius: 10px">
-        <p style="margin-left: 35%; color: aquamarine">Motivation Lines !</p>
+        <p style="margin-left: 35%; color: aquamarine">Motivation Lines!</p>
         <div style="width: 400px">
           <h1 id="Author"></h1>
           <p id="Quots"></p>
         </div>
-        <button onclick="ShowshaiyariEnglish()">Genrate Quots</button>
+        <div class="buttontext">
+          <button onclick="ShowshaiyariEnglish()">Genrate Quots</button>
+          <button id="copy">Copy text</button>
+        </div>
+        
         <script src="index.js"></script>
       </div>
     </div>
